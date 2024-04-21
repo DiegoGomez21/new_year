@@ -186,3 +186,39 @@ body{
 .brindis .btn:hover {
     background-color: #2980b9; /* Color de fondo del botón al pasar el cursor */
 }
+
+.brindar-mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeOut 3s forwards; /* Animación de desvanecimiento */
+    max-width: 90%; /* Ancho máximo */
+    width: 300px; /* Ancho mínimo */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Media query para hacer el mensaje más pequeño en pantallas pequeñas */
+@media (max-width: 576px) {
+    .brindar-mensaje {
+        font-size: 1.5rem;
+        padding: 15px;
+        width: 200px;
+    }
+}
