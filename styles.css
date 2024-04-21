@@ -1,0 +1,156 @@
+body{
+    background-color:azure;
+}
+
+.main-2{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    flex-direction: column;
+    background-color:azure;
+}
+
+.title-c{
+    width: 100%;
+    height: 100%;
+    background-color:azure;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 30px;
+    
+    p {
+        font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+        font-size: 4rem; /* Tamaño grande */
+        font-weight: bold; /* Negrita */
+        color: #e26666; /* Color rojo brillante */
+        text-align: center; /* Centrado */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto */
+        padding: 20px; /* Espaciado interior */
+        border-radius: 20px; /* Bordes redondeados */
+        background-color: azure; /* Fondo azure */
+    }
+}
+
+.subtitle {
+    font-family: 'Pacifico', cursive; /* Fuente Pacifico */
+    font-size: 1.8rem; /* Tamaño grande */
+    font-weight: bold; /* Negrita */
+    color: #6b6767; /* Color rojo brillante */
+    text-align: center; /* Centrado */
+    margin-top: 10px; /* Margen superior */
+}
+
+.gift{
+    width: 10%;
+}
+
+/* Estilos para los confetis */
+.confeti {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0; /* Comienza invisible */
+    animation: confeti-fall 3s linear infinite; /* Animación */
+    z-index: 1; /* Asegura que esté por encima del div principal */
+    /* Colores aleatorios */
+    background-color: hsla( /* Color en formato HSLA */
+        /* Hue (tono) aleatorio entre 0 y 360 */
+        calc(360 * var(--hue)), 
+        /* Saturación y luminosidad constantes para un color brillante */
+        100%, 
+        50%, 
+        /* Opacidad constante */
+        0.9
+    );
+}
+
+@keyframes confeti-fall {
+    0% {
+        transform: translateY(-100vh) rotateZ(0deg); /* Comienza arriba y sin rotación */
+        opacity: 0; /* Invisible al principio */
+    }
+    100% {
+        transform: translateY(100vh) rotateZ(360deg); /* Termina abajo y con rotación completa */
+        opacity: 1; /* Visible al final */
+    }
+}
+
+
+.carrusel{
+    width: 100% !important;
+    border-radius: 5px !important;
+}
+
+.carousel-caption{
+    p{
+        font-weight: 800;
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para el mensaje de brindar */
+.brindar-mensaje {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeOut 3s forwards; /* Animación de desvanecimiento */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.brindis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* Espacio superior */
+}
+
+.brindis img {
+    width: 450px;
+    height: 450px;
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+.brindis .btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #3498db; /* Color de fondo del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.brindis .btn:hover {
+    background-color: #2980b9; /* Color de fondo del botón al pasar el cursor */
+}
