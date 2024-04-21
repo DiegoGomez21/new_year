@@ -96,6 +96,38 @@ body{
     }
 }
 
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Añade un fondo semitransparente para hacer el texto más legible */
+    color: #fff; /* Color del texto */
+    padding: 50px; /* Espaciado interno */
+}
+
+.carousel-caption p {
+    margin-bottom: 0; /* Evita que los párrafos tengan un margen inferior */
+}
+
+@media (max-width: 800px) {
+    .carousel-caption {
+        position: static; /* Cambia la posición a estática para que el texto fluya con el contenido */
+        background: none; /* Elimina el fondo transparente */
+        color: initial; /* Reinicia el color del texto */
+        padding: 0; /* Elimina el espaciado interno */
+    }
+
+    .carousel-caption p {
+        margin-bottom: 10px; /* Añade un pequeño margen inferior para separar los párrafos */
+    }
+
+    .carousel-indicators{
+        display: none !important;
+    }
+
+}
+
 /* Estilos para el mensaje de brindar */
 .brindar-mensaje {
     position: fixed;
@@ -133,8 +165,8 @@ body{
 }
 
 .brindis img {
-    width: 450px;
-    height: 450px;
+    width: 750;
+    height:  450px;
     margin-bottom: 20px; /* Espacio inferior */
 }
 
